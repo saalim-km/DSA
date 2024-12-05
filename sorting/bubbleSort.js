@@ -21,6 +21,8 @@ function bubbleSort(arr) {
 console.log(bubbleSort([5,4,3,2,1]));
 
 
+
+
 // ? DESCENDING ORDER BUBBLE SORT
 function bubbleSort(arr) {
     let swapped;

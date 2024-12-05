@@ -11,6 +11,8 @@ function factorial(n) {
 
 console.log(factorial(5));
 
+
+
 ? FACTORIAL RECURSIVE METHOD
 function factorial(n) {
     if(n==0){
@@ -21,6 +23,9 @@ function factorial(n) {
 }
 
 console.log(factorial(5));
+
+
+
 
 ? LINEAR SEARCH
 function linearSearch(target,arr) {
@@ -36,6 +41,9 @@ function linearSearch(target,arr) {
 
 const arr = [1,2,3,4,5];
 console.log(linearSearch(5,arr));
+
+
+
 
 ? BINARY SEARCH
 function binarySearch(target,arr) {
@@ -59,6 +67,9 @@ function binarySearch(target,arr) {
 }
 
 console.log(binarySearch(3,[1,2,3,4,5]));
+
+
+
 
 ? CHECKING THE NUMBER IS PRIME OR NOT
 function isPrime(n) {
@@ -86,6 +97,9 @@ function reverse(arr) {
 
 console.log(reverse([1,2,3,4,5]));
 
+
+
+
 ? REVERSE USING RECURSIVE METHOD
 function reverseRecursion(arr,start=0,end=arr.length-1) {
     if(start >= end) return arr;
@@ -98,6 +112,9 @@ function reverseRecursion(arr,start=0,end=arr.length-1) {
 }
 
 console.log(reverseRecursion([1,2,3,4,5]));
+
+
+
 
 ? BEFORE DOING BINARY SEARCH THE ARRAY SHOULD BE SORTED
 function binarySearch(arr, target) {
@@ -123,6 +140,10 @@ function binarySearch(arr, target) {
 const arr = [1,2,3,4];
 console.log(binarySearch(arr, 4));
 
+
+
+
+
 ? FACTORIAL ITERATIVE METHOD
 function factorial(n) {
     let result = 1;
@@ -132,6 +153,9 @@ function factorial(n) {
     return result;
 }
 console.log(factorial(5));
+
+
+
 
 ? FIND INDEX WITHOUT INBUILD METHOD
 function findIndex(target,arr) {
@@ -144,6 +168,8 @@ function findIndex(target,arr) {
     return -1;
 }
 console.log(findIndex(4,[1,2,3,4,5,6]));
+
+
 
 ? REVERSE AN ARRAY
 function reverseArr(arr) {
@@ -159,6 +185,9 @@ function reverseArr(arr) {
 }
 let arr = [1,2,3,4,5];
 console.log(reverseArr(arr));
+
+
+
 
 ? REVERSE ARRAY WITH TWO POINTER
 function reverseArr(arr) {
@@ -177,12 +206,17 @@ function reverseArr(arr) {
 
 console.log(reverseArr([1,2,3,4,5]));
 
+
+
 ? REMOVE DUPLICATE
 function removeDuplicate(arr) {
     const a = [...new Set(arr)]
     return a;
 }
 console.log(removeDuplicate([1,2,2,3,3,4,5,]));
+
+
+
 
 ? REMOVE DUPLICATE WITHOUT INBUILD METHODS
 function removeDuplicateNormal(arr) {
@@ -197,6 +231,9 @@ function removeDuplicateNormal(arr) {
 }
 
 console.log(removeDuplicateNormal([1,1,2,2,3,3,4,4,5,6,7,4,3]));
+
+
+
 
 ? PALINDROME CHECK
 function palindromeRecrusrive(str,s,e) {
@@ -216,6 +253,8 @@ let s=0;
 let e=str.length-1;
 
 console.log(palindromeRecrusrive(str,s,e));
+
+
 
 ? MAJORITY ELEMENT
 function majorityElement(arr) {
@@ -244,6 +283,9 @@ function majorityElement(arr) {
 
   console.log(majorityElement([1,2,2,2,2,2,4,4,4,4,4,4,4]))
 
+
+
+
 ? FIND LARGEST & SEC-LARGEST , THEN FIND THE DIFFERENCE AND ADD IN TO THE MIDDLE OF THE ARRAY
 function insertMiddle(arr) {
   let largest = -Infinity;
@@ -267,6 +309,8 @@ function insertMiddle(arr) {
 }
 
 console.log(insertMiddle([1, 2, 3, 4, 5, 6]));
+
+
 
 ? MAX SUB-ARRAY
 function maxSubarraySum(arr) {
@@ -297,6 +341,9 @@ function maxSubarraySum(arr) {
 const arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
 console.log(maxSubarraySum(arr));
 
+
+
+
 ? PASCAL TO SNAKE-CASE
 function pascalToSnake(str) {
   let snakeCase = '';
@@ -319,6 +366,9 @@ function pascalToSnake(str) {
 }
 
 console.log(pascalToSnake('LeetCode'))
+
+
+
 
 ? STRING TO ARRAY
 function strToArr(str) {

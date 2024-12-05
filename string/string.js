@@ -20,6 +20,9 @@ function palindromCheck(word) {
 console.log(palindromCheck('madam'));
 
 
+
+
+
 //?  USING RECURSIVE METHOD
 function palindromeRecrusrive(str,s,e) {
     str = str.toLowerCase();
@@ -41,6 +44,8 @@ console.log(palindromeRecrusrive(str,s,e));
 
 
 
+
+
 //?  REVERSE STRING 
 //?  USING INBUILD REVERSE METHOD
 
@@ -49,6 +54,9 @@ function reverse(str) {
 }
 
 console.log(reverse('hello'));
+
+
+
 
 
 
@@ -74,6 +82,8 @@ function reverseNormal(str) {
 console.log(reverseNormal('malayalam'));
 
 
+
+
 //?  USING RECURSIVE METHOD
 //?  TIME COMPLEXITY : O(n).
 //?  SPACE COMPLEXITY : O(n).
@@ -85,6 +95,9 @@ function reverRecusrion(str) {
 }
 
 console.log(reverRecusrion('hello world'));
+
+
+
 
 
 
@@ -104,6 +117,10 @@ console.log(removeVowels('hello world'));
 
 
 
+
+
+
+// ? FUNCITON TO CHECK IF A STRING IS PALINDROME
 function palindromeRecursive(str,s,e) {
     str = str.toLowerCase();
     if(s>=e) {
@@ -121,9 +138,3 @@ const str = 'malayalam';
 const s = 0;
 const e = str.length-1;
 console.log(palindromeRecursive(str,s,e));
-
-
-
-
-
-

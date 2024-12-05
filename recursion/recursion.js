@@ -18,6 +18,10 @@ function factorial(n) {
 }
 console.log(factorial(5));
 
+
+
+
+
 // ? PALINDROME
 function palindromeRecrusrive(str,s,e) {
   if(s >= e) {
@@ -42,6 +46,11 @@ function reverseRecursive(str) {
 }
 
 console.log(reverseRecursive('hello'))
+
+
+
+
+
 
 
 // ? SUM ARRAY  
