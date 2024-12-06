@@ -64,3 +64,25 @@ function sumArray(arr,index = 0) {
 }  
 let arr = [1,2,3,4,5,6,7,8,9];
 console.log(sumArray(arr));
+
+
+
+
+//? BINARY SEARCH RECURSIVE
+
+let mid = Math.floor((s+e)/2);
+if(arr[mid]==target) {
+  return mid;
+}
+
+if(target > arr[mid]) {
+  let start = mid + 1;
+  return binaryRecursive(arr,start,e,target);
+}else {
+  let end = mid - 1;
+  return binaryRecursive(arr,s,end,target);
+}
+}
+
+let arr = [1,2,3,4,5];
+console.log(binaryRecursive(arr,0,arr.length-1,7))
