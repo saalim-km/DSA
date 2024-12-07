@@ -101,7 +101,7 @@ console.log(reverRecusrion('hello world'));
 
 
 
-//? FUCTION TO REMOVE VOWELS 
+// //? FUCTION TO REMOVE VOWELS 
 function removeVowels(str) {
     let vowels = ['a','e','i','o','u'];
     for(let i=0;i<str.length;i++) {
@@ -138,3 +138,50 @@ const str = 'malayalam';
 const s = 0;
 const e = str.length-1;
 console.log(palindromeRecursive(str,s,e));
+
+
+//? Find how many time each character is repeating in string
+function countChar(str) {
+    let map = new Map();
+    for(let i=0;i<str.length;i++) {
+        if(map.has(str[i])){
+            map.set(str[i],map.get(str[i])+1);
+        }else{
+            map.set(str[i],1);
+        }
+    }
+
+    return map;
+}
+console.log(countChar('datastructure'));
+
+
+
+
+
+//? REVERSE WORDS IN A STRING
+// HELLO WORLD -> OLLEH DLROW
+
+function reverseWOrd(str){
+    let result = '';
+    let word = '';
+
+    for(let i=0;i<=str.length;i++) {
+        if(str[i] == ' ' || i == str.length){ // * check if the i reaches the length of the string or space.
+            for(let i=word.length-1;i>=0;i--) {
+                result += word[i];
+            }
+
+            if(i !== str.length) result+= ' ';
+
+            word = '';
+        }
+
+        word += str[i];
+    }
+
+    
+    return result;
+}
+console.log(reverseWOrd('HELLO WORLD'));
+
