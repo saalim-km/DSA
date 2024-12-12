@@ -393,3 +393,49 @@ function strToArr(str) {
 
 let str = "bana,anana,ther,,fig";
 console.log(strToArr(str));
+
+
+//? FIND LONGEST REPEATING CHARACTER , APPROCACH : (POINTER METHOD)
+function longestRepeatingChar(str) {
+    let maxChar = '';
+    let maxCount = 0;
+    let currentChar = '';
+    let currentCount = 0;
+
+    for(let i=0;i<str.length;i++) {
+        if(str[i] == currentChar) {
+            currentCount++;
+        }else {
+            currentChar = str[i];
+            currentCount = 1;
+        }
+
+        if(currentCount > maxCount) {
+            maxChar = currentChar;
+            maxCount = currentCount;
+        }
+    }
+
+    return {maxChar,maxCount}
+}
+console.log(longestRepeatingChar('aabbb'));
+
+
+
+//? TWO SUM , TIME COMPLEXITY : O(n)
+function twoSum(arr,target) {
+    let map = new Map();
+    for(let elem of arr) {
+        let compliment = target - elem;
+
+        if(map.has(compliment)) {
+            return [map.get(compliment),elem];
+        }
+
+        map.set(elem,elem);
+    }
+
+    return [];
+}
+
+console.log(twoSum([1,2,3,4],4));
