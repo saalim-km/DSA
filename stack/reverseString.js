@@ -1,38 +1,14 @@
-//? REVERSE A STRING
-class Stack {
-    constructor() {
-        this.stack = [];
+function reverseStringUsingStack(str) {
+    let reversedStr = '';
+    let stack = [];
+    for(let char of str) {
+        stack.push(char);
     }
 
-    push(data) {
-        this.stack.push(data);
+    while(stack.length > 0) {
+        reversedStr += stack.pop()
     }
 
-    pop() {
-        return this.stack.pop();
-    }
-
-    isEmpty() {
-        return this.stack.length == 0;
-    }
-
-    getSize() {
-        return this.stack.length;
-    }
+    return reversedStr;
 }
-
-function reverseString(str) {
-    let rev = '';
-    const stack = new Stack();
-
-    for(let i=0;i<str.length;i++) {
-        stack.push(str[i]);
-    }
-
-    while(!stack.isEmpty()) {
-        rev += stack.pop();
-    }
-
-    return rev;
-}
-console.log(reverseString('hello'));
+console.log(reverseStringUsingStack('hello'));

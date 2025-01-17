@@ -8,6 +8,8 @@ function fibonacci(n) {
 
 console.log(fibonacci(6))
 
+
+
 //? FACTORIAL
 function factorial(n) {
   if(n===0) {
@@ -37,6 +39,8 @@ function palindromeRecrusrive(str,s,e) {
 
 let str = 'hello';
 console.log(palindromeRecrusrive(str,0,str.length-1));
+
+
 
 // ? REVERSE A STRING
 function reverseRecursive(str) {

@@ -100,22 +100,7 @@ class LinkdedList {
     }
 
     removeMiddle() {
-        if(!this.head) {
-            console.log('list is empty');
-            return;
-        }
-
-        let prev = null;
-        let slow = this.head;
-        let fast = this.head;
-
-        while(fast && fast.next) {
-            prev = slow;
-            slow = slow.next;
-            fast = fast.next.next;
-        }
-
-        prev.next = slow.next;
+        
 
     }
 

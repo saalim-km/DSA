@@ -26,3 +26,5 @@ function merge(left,right) {
     return [...sortedArray,...left,...right];
 }
 console.log(mergeSort([5,4,3,2,1]));
+
+

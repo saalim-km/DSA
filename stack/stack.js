@@ -34,6 +34,7 @@ class Stack {
     this.size--;
   }
 
+
   print() {
     let curr = this.top;
     while(curr) {
@@ -59,7 +60,7 @@ a.print()
 
 
 
-//? USING ARRAY
+// //? USING ARRAY
 class Stack {
     constructor() {
         this.stack = [];
@@ -93,5 +94,3 @@ a.push(80)
 a.pop();
 a.pop();
 a.display();
-
-

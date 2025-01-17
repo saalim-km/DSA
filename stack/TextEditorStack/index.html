@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Editor with Undo/Redo</title>
+</head>
+
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.editor {
+  width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  resize: none;
+}
+
+.buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+</style>
+
+<body>
+  <div class="editor">
+    <textarea id="editor" rows="10" placeholder="Start typing..."></textarea>
+    <div class="buttons">
+      <button id="undo">Undo</button>
+      <button id="redo">Redo</button>
+    </div>
+  </div>
+</body>
+
+
+
+<script>
+    class TextEditor {
+  constructor() {
+    this.stack = [];         // To store the undo history
+    this.redoStack = [];     // To store the redo history
+    this.currentText = '';   // Current state of the text editor
+    
+    this.editor = document.getElementById('editor');
+    this.undoButton = document.getElementById('undo');
+    this.redoButton = document.getElementById('redo');
+
+    // Bind methods to ensure the correct 'this'
+    this.editor.addEventListener('input', this.addChar.bind(this));
+    this.undoButton.addEventListener('click', this.undo.bind(this));
+    this.redoButton.addEventListener('click', this.redo.bind(this));
+  }
+
+  // Method to handle text input
+  addChar() {
+    this.stack.push(this.currentText); // Save current state for undo
+    this.currentText = this.editor.value; // Update current text
+    this.redoStack = []; // Clear redo stack because of new input
+  }
+
+  // Undo method
+  undo() {
+    if (this.stack.length > 0) {
+      this.redoStack.push(this.currentText); // Save current state to redo stack
+      this.currentText = this.stack.pop();  // Restore previous state
+      this.editor.value = this.currentText; // Update editor with restored state
+    }
+  }
+
+  // Redo method
+  redo() {
+    if (this.redoStack.length > 0) {
+      this.stack.push(this.currentText);    // Save current state to undo stack
+      this.currentText = this.redoStack.pop(); // Restore the last undone state
+      this.editor.value = this.currentText; // Update editor with redone state
+    }
+  }
+}
+
+// Instantiate TextEditor
+new TextEditor();
+
+</script>
+
+</html>

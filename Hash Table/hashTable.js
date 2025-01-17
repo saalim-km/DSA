@@ -63,13 +63,6 @@ class HashTable {
 
         return -1;
     }
-
-    display() {
-        this.table.forEach((item)=> {
-            const chainedItem = item.map(([key,value]) => `[${key} ${value}]`);
-            console.log(chainedItem);
-        });
-    }
 }
 
 const ht = new HashTable();
