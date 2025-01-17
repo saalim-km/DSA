@@ -1,60 +1,124 @@
-class HashTableLinear {
-    constructor(size) {
-        this.table = new Array(size)
-        this.size = size
+class HashTable {
+    constructor() {
+        this.table = new Array(200);
+        this.size = 0;
     }
 
-    hash(key) {
-        let total = 0
-        for (let i = 0; i < key.length; i++) {
-            total += key.charCodeAt(i)
+    _hash(key) {
+        let hash = 0;
+        for(let char of key) {
+            hash += char.charCodeAt(0);
         }
-        return total % this.size
+        
+        return hash % this.table.length;
     }
 
-    set(key, value) {
-        let index = this.hash(key)
-        while (this.table[index] !== undefined) {
-            index = (index + 1) % this.size
-        }
-        this.table[index] = [key, value]
+    set(key,value) {
+        const index = this._hash(key);
+        this.table[index] = [key,value];
+        this.size++;
     }
 
     get(key) {
-        let index = this.hash(key)
-        while (this.table[index] !== undefined) {
-            if (this.table[index][0] === key) {
-                return this.table[index][1]
-            }
-            index = (index + 1) % this.size
-        }
-        return undefined
+        const index = this._hash(key);
+        return this.table[index];
     }
 
     remove(key) {
-        let index = this.hash(key)
-        while (this.table[index] !== undefined) {
-            if (this.table[index][0] === key) {
-                const value = this.table[index]
-                this.table[index] = undefined
-                return value
-            }
-            index = (index + 1) % this.size
+        const index = this._hash(key);
+
+        if(this.table[index] && this.table.length) {
+            this.table[index] = undefined;
+            this.size--;
+            return true;
+        }else{
+            return false;
         }
-        return undefined
     }
 
-    display() {
-        for (let i = 0; i < this.table.length; i++) {
-            if (this.table[i]) {
-                console.log(i, this.table[i])
-            }
+}
+const a = new HashTable();
+a.set('Spain',110);
+a.set('ǻ',192);
+console.log(a.get('ǻ'));
+
+
+
+class HashTable {
+    constructor(){
+        this.table = new Array(100);
+        this.size = 0;
+    }
+
+    getSize() {
+        return this.size;
+    }
+
+    _hash(key) {
+        let hash = 0;
+        for(let char of key) {
+            hash += char.charCodeAt(0);
         }
+        return hash % this.table.length;
+    }
+
+    set(key,value) {
+        const index = this._hash(key);
+
+        if(this.table[index]) {
+            for(let i=0;i<this.table[index].length;i++) {
+                if(this.table[index][i][0] == key) {
+                    this.table[index][i][1] = value;
+                    return;
+                }
+            }
+
+            this.table[index].push([key,value]);
+            this.size++;
+        }else {
+            this.table[index] = [];
+            this.table[index].push([key,value]);
+            this.size++;
+        }
+
+    }
+
+    get(key) {
+        const index = this._hash(key);
+
+        if(this.table[index]) {
+            for(let i=0;i<this.table[index].length;i++) {
+                if(this.table[index][i][0] == key) {
+                    return this.table[index][i][1];
+                }
+            }
+            return undefined;
+        }
+
+        return undefined;
+    }
+
+    remove(key) {
+        const index = this._hash(key);
+
+        if(this.table[index]) {
+            for(let i=0;i<this.table[index].length;i++) {
+                if(this.table[index][i][0] == key) {
+                    this.table[index].splice(i,1);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        return false;
     }
 }
 
-const table = new HashTableLinear(30)
-table.set('name', "kiran")
-table.set('name', "vinu")
-table.set('age', 29)
-table.display()
+const ht = new HashTable()
+ht.set('name','salim');
+ht.set('age',18);
+ht.set('place','kochi');
+ht.set('name','aslam')
+ht.remove('name')
+console.log(ht.get('name'));

@@ -101,7 +101,7 @@ console.log(reverRecusrion('hello world'));
 
 
 
-// //? FUCTION TO REMOVE VOWELS 
+ //? FUCTION TO REMOVE VOWELS 
 function removeVowels(str) {
     let vowels = ['a','e','i','o','u'];
     for(let i=0;i<str.length;i++) {
@@ -184,4 +184,3 @@ function reverseWOrd(str){
     return result;
 }
 console.log(reverseWOrd('HELLO WORLD'));
-

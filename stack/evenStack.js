@@ -36,7 +36,7 @@ class Stack {
 
         return evenStack;
     }
-
+    
     display() {
         return this.stack;
     }
@@ -47,4 +47,4 @@ a.push(10)
 a.push(16)
 a.push(15)
 console.log(a.display());
-console.log(a.getEven());
+console.log(a.getEven().display());

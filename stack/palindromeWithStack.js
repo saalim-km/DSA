@@ -1,3 +1,4 @@
+//? PALINDROME CHECKING USING STACK 
 function isPalindrome(str) {
     let stack = [];
 

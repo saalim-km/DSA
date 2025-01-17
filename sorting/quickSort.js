@@ -24,6 +24,8 @@ function quickSort(arr) {
 console.log(quickSort([4,3,2,1]));
 
 
+
+
 //? DESCENDING ORDER
 
 function quickSort(arr) {
