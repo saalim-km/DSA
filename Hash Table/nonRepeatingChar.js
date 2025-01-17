@@ -14,8 +14,11 @@ function nonRepeatingChar(str) {
     return null;
 }
 console.log(nonRepeatingChar('!@!@#'));
+<<<<<<< HEAD
 
 
 
 
 console.log('completed_________________________________________________________________________________________________________');
+=======
+>>>>>>> 4faf37f33a2f8517f46d3854a0d1354a60d5c3e6

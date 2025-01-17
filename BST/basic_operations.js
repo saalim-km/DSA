@@ -235,6 +235,10 @@ bst.insert(20);
 bst.insert(60);
 bst.remove(20);
 bst.remove(60);
+<<<<<<< HEAD
 console.log(bst);
 
 console.log('completed_________________________________________________________________________________________________________');
+=======
+console.log(bst);
+>>>>>>> 4faf37f33a2f8517f46d3854a0d1354a60d5c3e6

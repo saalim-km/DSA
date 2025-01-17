@@ -11,7 +11,11 @@ function reverseStringUsingStack(str) {
 
     return reversedStr;
 }
+<<<<<<< HEAD
 console.log(reverseStringUsingStack('hello'));
 
 
 console.log('completed_________________________________________________________________________________________________________');
+=======
+console.log(reverseStringUsingStack('hello'));
+>>>>>>> 4faf37f33a2f8517f46d3854a0d1354a60d5c3e6

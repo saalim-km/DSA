@@ -47,8 +47,4 @@ a.push(10)
 a.push(16)
 a.push(15)
 console.log(a.display());
-console.log(a.getEven().display());
-
-
-
-console.log('completed_________________________________________________________________________________________________________');
+console.log(a.getEven());

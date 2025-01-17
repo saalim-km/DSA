@@ -184,7 +184,10 @@ function reverseWOrd(str){
     return result;
 }
 console.log(reverseWOrd('HELLO WORLD'));
+<<<<<<< HEAD
 
 
 
 console.log('completed_________________________________________________________________________________________________________');
+=======
+>>>>>>> 4faf37f33a2f8517f46d3854a0d1354a60d5c3e6
