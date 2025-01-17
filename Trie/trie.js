@@ -88,23 +88,6 @@ class Trie {
     return results;
   }
 
-  longestPrefix() {
-    let current = this.root;
-    let prefix = "";
-
-    while (
-      current &&
-      Object.keys(current.children).length === 1 &&
-      !current.endOfWord
-    ) {
-      const char = Object.keys(current.children)[0];
-      prefix += char;
-      current = current.children[char];
-    }
-
-    return prefix;
-  }
-  
 }
 
 const trie = new Trie();
