@@ -49,3 +49,6 @@ function quickSort(arr) {
     return [...quickSort(left),p,...quickSort(right)];
 }
 console.log(quickSort([4,3,2,1]));
+
+
+console.log('completed_________________________________________________________________________________________________________');

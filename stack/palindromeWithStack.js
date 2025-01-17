@@ -15,3 +15,6 @@ function isPalindrome(str) {
     return true;
 }
 console.log(isPalindrome('madam'));
+
+
+console.log('completed_________________________________________________________________________________________________________');

@@ -122,3 +122,8 @@ ht.set('place','kochi');
 ht.set('name','aslam')
 ht.remove('name')
 console.log(ht.get('name'));
+
+
+
+
+console.log('completed_________________________________________________________________________________________________________');

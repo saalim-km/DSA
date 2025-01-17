@@ -90,3 +90,6 @@ if(target > arr[mid]) {
 
 let arr = [1,2,3,4,5];
 console.log(binaryRecursive(arr,0,arr.length-1,7))
+
+
+console.log('completed_________________________________________________________________________________________________________');

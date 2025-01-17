@@ -42,3 +42,8 @@ const st = new Stack();
 console.log(st.getMiddle());
 st.removeMiddle();
 st.display();
+
+
+
+
+console.log('completed_________________________________________________________________________________________________________');
