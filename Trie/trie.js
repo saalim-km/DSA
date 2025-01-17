@@ -87,11 +87,23 @@ class Trie {
     dfs(current, prefix);
     return results;
   }
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> 4faf37f33a2f8517f46d3854a0d1354a60d5c3e6
+  longestPrefix() {
+    let current = this.root;
+    let prefix = "";
+
+    while (
+      current &&
+      Object.keys(current.children).length === 1 &&
+      !current.endOfWord
+    ) {
+      const char = Object.keys(current.children)[0];
+      prefix += char;
+      current = current.children[char];
+    }
+
+    return prefix;
+  }
 }
 
 const trie = new Trie();
@@ -113,10 +125,7 @@ console.log("after deleting js =>", trie.search("javascript"));
 
 console.log("---------------------------------------");
 
-<<<<<<< HEAD
 console.log(trie.autoComplete("he"));
 
 console.log('completed_________________________________________________________________________________________________________');
-=======
 console.log(trie.autoComplete("he"));
->>>>>>> 4faf37f33a2f8517f46d3854a0d1354a60d5c3e6
